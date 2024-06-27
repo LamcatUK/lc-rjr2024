@@ -14,24 +14,24 @@ defined('ABSPATH') || exit;
 <footer>
     <div class="container-xl">
         <div class="footer__grid py-5">
-            <div>
-                <img src="<?=get_stylesheet_directory_uri()?>/img/rjr-logo--colour.svg" width=140 height=40 alt="RJR Waste Clearance">
+            <div id="footer_logo" class="text-center text-sm-start">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/rjr-logo--colour.svg" width=140 height=40 alt="RJR Waste Clearance" class="mb-4">
             </div>
-            <div>
+            <div id="footer_services" class="text-center text-sm-start">
                 <div class="footer__title">Services</div>
                 <div class="footer__content">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu_1')); ?>
                 </div>
             </div>
-            <div>
+            <div id="footer_locations" class="text-center text-sm-start">
                 <div class="footer__title">Locations</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu_2')); ?>
             </div>
-            <div>
+            <div id="footer_links" class="text-center text-sm-start">
                 <div class="footer__title">Quick Links</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu_3')); ?>
             </div>
-            <div>
+            <div id="footer_call" class="mx-auto ms-sm-0">
                 <a class="footer__call mb-4" href="tel:<?=parse_phone(get_field('contact_phone','options'))?>">
                     <i class="fa-solid fa-phone text-green-400"></i>
                     <div>
