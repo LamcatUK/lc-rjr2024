@@ -58,15 +58,25 @@ add_action('wp_footer', function(){
             delay: 4000,
             disableOnInteraction: true,
         },
-        slidesPerView: 3,
+        slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 0, // Adjust this value to match your design
+        spaceBetween: 0,
         on: {
             init: function() {
                 setEqualHeight('.review_slider__slide');
             },
             resize: function() {
                 setEqualHeight('.review_slider__slide');
+            }
+        },
+        breakpoints: {
+            768: {
+            slidesPerView: 2,
+            spaceBetween: 0
+            },
+            992: {
+            slidesPerView: 3,
+            spaceBetween: 0
             }
         }
     });
