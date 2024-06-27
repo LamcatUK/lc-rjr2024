@@ -46,11 +46,15 @@ defined('ABSPATH') || exit;
         </div>
     </div>
     <div class="colophon">
-        <div class="container-xl d-flex justify-content-between flex-wrap">
-            <div>&copy; <?=date('Y')?> RJR Waste Clearance Ltd. Registered in England, no 15793151. Registered Office: 48 Spring Plat, Crawley, West Sussex, RH10 7BG</div>
-            <div>
-                <a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookie-policy/">Cookie</a> Policies | Site by <a
-                    href="https://www.lamcat.co.uk/" target="_blank">Lamcat</a>
+        <div class="container-xl">
+            <div class="row g-2">
+                <div class="col-lg-8 text-center text-lg-start">
+                    &copy; <?=date('Y')?> RJR Waste Clearance Ltd. Registered in England, no 15793151. Registered Office: 48 Spring Plat, Crawley, West Sussex, RH10 7BG
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookie-policy/">Cookie</a> Policies | Site by <a
+                        href="https://www.lamcat.co.uk/" target="_blank">Lamcat</a>
+                </div>
             </div>
         </div>
     </div>

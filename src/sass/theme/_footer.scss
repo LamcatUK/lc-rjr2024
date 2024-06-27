@@ -10,7 +10,7 @@ footer {
   
     font-size: var(--fs-300);
 
-    .row {
+    & > .container-xl {
         padding-top: 5rem;
         padding-bottom: 3rem;
     }

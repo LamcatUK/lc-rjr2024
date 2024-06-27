@@ -21834,7 +21834,7 @@ footer {
 footer .container-xl {
   position: relative;
 }
-footer .row {
+footer > .container-xl {
   padding-top: 5rem;
   padding-bottom: 3rem;
 }
