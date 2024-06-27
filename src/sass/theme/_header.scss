@@ -1,0 +1,82 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: var(--col-grey-400);
+
+    transition: top var(--transition);
+    max-width: 100vw;
+
+    box-shadow: var(--shadow-sm);
+
+    &.hidden {
+        top: -110px;
+    }
+
+    .nav-link {
+        font-family: var(--ff-heading);
+        font-size: var(--fs-600);
+        color: var(--col-white);
+        padding-block: 1rem;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        position: relative;
+        &:hover,
+        &:focus-visible,
+        &[aria-current="page"] {
+            color: var(--col-green-400);
+        }
+    }
+
+    #main-nav {
+        @media (min-width:992px) {
+            .container-xl {
+                align-items: stretch;
+            }
+        }
+    }
+
+    .navCall {
+        display: flex;
+        gap: 0.5rem;
+        text-decoration: none;
+        i {
+            align-self: center;
+            font-size: 1.4rem;
+        }
+        div {
+            font-weight: var(--fw-600);
+        }
+    }
+
+
+    .navbar-brand {
+        order: 1;
+    }
+    .navCall {
+        order: 2;
+        @media (min-width:992px) {
+            order: 5;
+        }
+    }
+    .navbar-toggler {
+        order: 3
+    }
+    .navbars {
+        order: 4;
+    }
+
+}
+.navbar-brand {
+    background-image: url(../img/rjr-logo--colour.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    width: 140px;
+    height: 40px;
+
+    margin-right: 0;
+}

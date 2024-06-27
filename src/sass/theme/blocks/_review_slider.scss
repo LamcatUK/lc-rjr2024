@@ -1,0 +1,29 @@
+.review_slider {
+    background-color: var(--col-grey-100);
+    background-image: url(../img/chevron-200.svg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 160px 230px;
+
+    &__slider {
+        overflow-x: hidden;
+    }
+
+    .swiper-wrapper {
+        padding-bottom: 2.5rem;
+    }
+    &__card {
+        background-color: var(--col-white);
+        border-radius: var(--border-radius-sm);
+        box-shadow: var(--shadow-lg);
+        padding: 1rem;
+        font-size: var(--fs-400);
+        height: 100%;
+        margin-inline: 1rem
+    }
+    &__title {
+        font-weight: var(--fw-600);
+        font-size: var(--fs-600);
+        margin-bottom: 0.5em;
+    }
+}

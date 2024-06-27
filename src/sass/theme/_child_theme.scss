@@ -1,0 +1,114 @@
+@import "props";
+@import "colours";
+@import "typography";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "blog";
+@import "blocks/blocks";
+
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+.edit-link {
+    display: none;
+}
+
+::selection {
+    background-color: var(--col-green-400);
+    color: var(--col-grey-400);
+}
+
+a {
+    transition: color var(--transition);
+}
+
+.container-xl .container-xl {
+    padding-inline: 0;
+}
+
+main {
+    margin-top: var(--h-top);
+    @media (min-width:992px) {
+        margin-top: var(--h-top-lg);
+    }
+    a:not([class]) {
+        text-decoration: none;
+        font-weight: var(--fw-600);
+        color: inherit;
+        &:hover {
+            color: var(--col-taupe-400)
+        }
+    }
+}
+
+@media all and (min-width:992px) {
+    .cols-lg-2 {
+        columns: 2;
+    }
+    .cols-lg-3 {
+        columns: 3;
+    }
+}
+
+.wpcf7-select {
+    @extend .form-select;
+}
+input[type=submit].wpcf7-submit {
+    &:disabled {
+        background-color: var(--col-grey-500);
+        &:hover {
+            background-color: var(--col-grey-500);
+        }
+    }
+    // background-color: var(--col-taupe-600);
+    width: auto;
+    background-color: #39464e;
+    color: var(--col-white);
+    border-radius: 2px;
+    padding: 0.5rem 2.5rem;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: var(--fw-600);
+    transition: background-color var(--transition);
+    &:hover {
+        // background-color: var(--col-taupe-400);
+        background-color: #889095;
+    }
+}
+
+.breadcrumbs {
+    color: var(--col-grey-500);
+    font-size: var(--fs-300);
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: var(--fw-600);
+        &:hover {
+            color: var(--col-black);
+        }
+    }
+}
+
+.rounded--lg {
+    border-radius: var(--border-radius-lg);
+}
+.rounded--sm {
+    border-radius: var(--border-radius-lg);
+}
+
+.has-shadow--lg {
+    box-shadow: var(--shadow-lg);
+}
+

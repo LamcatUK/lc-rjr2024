@@ -1,0 +1,32 @@
+.service_nav {
+    &__grid {
+        display: grid;
+        gap: 2rem;
+        @media (min-width:576px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media (min-width:992px) {
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+    &__card {
+        background-color: var(--col-grey-400);
+        color: var(--col-white);
+        padding: 1rem;
+        border-radius: var(--border-radius-sm);
+        box-shadow: var(--shadow-lg);
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow var(--transition), transform var(--transition);
+        &:hover {
+            color: var(--col-white);
+            transform: translateY(2px);
+            box-shadow: var(--shadow-sm);
+        }
+    }
+    &__icon {
+        width: 96px;
+        height: 78px;
+        margin-bottom: 1rem;
+    }
+}

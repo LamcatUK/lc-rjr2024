@@ -1,0 +1,13 @@
+.hero {
+    display: grid;
+    place-content: center;
+    background-color: var(--col-grey-400);
+    min-height: 400px;
+    @media (min-width:576px) {
+        height: 400px;
+    }
+    background-image: url(../img/chevron-600.svg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 160px 230px;
+}
