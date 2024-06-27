@@ -21834,10 +21834,6 @@ footer {
 footer .container-xl {
   position: relative;
 }
-footer > .container-xl {
-  padding-top: 5rem;
-  padding-bottom: 3rem;
-}
 footer .menu {
   list-style: none;
   -webkit-padding-start: 0;
