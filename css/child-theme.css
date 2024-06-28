@@ -21784,6 +21784,9 @@ header .nav-link {
 header .nav-link:hover, header .nav-link:focus, header .nav-link:focus-visible, header .nav-link[aria-current=page] {
   color: var(--col-green-400);
 }
+header .dropdown-item:active {
+  background-color: var(--col-green-400);
+}
 @media (min-width: 992px) {
   header #main-nav .container-xl {
     align-items: stretch;

@@ -31,6 +31,10 @@ header {
         }
     }
 
+    .dropdown-item:active {
+        background-color: var(--col-green-400);
+    }
+
     #main-nav {
         @media (min-width:992px) {
             .container-xl {
