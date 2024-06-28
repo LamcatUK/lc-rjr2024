@@ -50,6 +50,11 @@ main {
             color: var(--col-green-400)
         }
     }
+
+    ul:not([class]) > li {
+        padding-bottom: 0.5em;
+    }
+
 }
 
 @media all and (min-width:992px) {

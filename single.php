@@ -19,7 +19,7 @@ $blocks = parse_blocks($content);
 $sidebar = array();
 $after;
 ?>
-    <section class="breadcrumbs container-xl">
+    <section class="breadcrumbs container-xl pb-2">
         <?php
 if (function_exists('yoast_breadcrumb')) {
     yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
@@ -84,40 +84,46 @@ foreach ($blocks as $block) {
             </div>
         </div>
         <?php
-        $cats = get_the_category();
+
+$cats = get_the_category();
 $ids = wp_list_pluck($cats, 'term_id');
-$r = new WP_Query(array(
+
+$q = new WP_Query(array(
+    'post_type' => 'post',
     'category__in' => $ids,
     'posts_per_page' => 4,
     'post__not_in' => array(get_the_ID())
 ));
-if ($r->have_posts()) {
+
+if ($q->have_posts()) {
     ?>
-        <section class="related pb-5">
-            <h3><span>Related</span> Posts</h3>
-            <div class="row g-4">
-                <?php
-while ($r->have_posts()) {
-    $r->the_post();
-    ?>
-                <div class="col-md-6 col-xl-3">
-                    <a class="blog_card"
-                        href="<?=get_the_permalink()?>">
-                        <img src="<?=get_the_post_thumbnail_url(get_the_ID(), 'large')?>"
-                            alt="" class="blog_card__image">
-                        <div class="blog_card__content">
-                            <h3 class="blog_card__title">
-                                <?=get_the_title()?>
-                            </h3>
-                        </div>
-                    </a>
-                </div>
-                <?php
-}
-    ?>
-            </div>
-        </section>
+    <h3 class="fs-700"><span>Related</span> Posts</h3>
+    <div class="grid mb-4">
         <?php
+    while ($q->have_posts()) {
+    $q->the_post();
+    $img = get_the_post_thumbnail_url(get_the_ID(), 'large');
+    if (!$img) {
+        $img = get_stylesheet_directory_uri() . '/img/default-blog.jpg';
+    }
+
+    ?>
+        <a class="grid__card grid__card--sm <?=$catclass?>"
+            href="<?=get_the_permalink(get_the_ID())?>">
+            <div class="card card--<?=$flashcat?>">
+                <div class="card__image_container">
+                    <?=get_the_post_thumbnail(get_the_ID(), 'large', array('class' => 'card__image'))?>
+                </div>
+                <div class="card__inner">
+                    <h3 class="card__title mb-0">
+                        <?=get_the_title()?>
+                    </h3>
+                </div>
+            </div>
+        </a>
+        <?php
+    }
+    wp_reset_postdata();
 }
 ?>
     </div>

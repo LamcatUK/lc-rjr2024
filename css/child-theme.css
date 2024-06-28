@@ -21682,19 +21682,19 @@ h3, .h3 {
 .fs-300,
 .has-small-font-size,
 .small {
-  font-size: var(--fs-300);
+  font-size: var(--fs-300) !important;
 }
 
 .fs-700,
 .has-medium-font-size,
 .medium {
-  font-size: var(--fs-700);
+  font-size: var(--fs-700) !important;
 }
 
 .fs-800,
 .has-large-font-size,
 .large {
-  font-size: var(--fs-800);
+  font-size: var(--fs-800) !important;
 }
 
 strong, b, .fw-bold {
@@ -22008,10 +22008,14 @@ footer #footer_call {
 .grid .card__title {
   font-size: var(--fs-600);
 }
+.grid .grid__card--sm .card__inner {
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+}
 
 .single-blog {
   padding-top: 2rem;
-  padding-bottom: 5rem;
 }
 .single-blog h2, .single-blog .h2 {
   font-size: var(--fs-700);
@@ -22271,6 +22275,9 @@ main a:not([class]) {
 }
 main a:not([class]):hover {
   color: var(--col-green-400);
+}
+main ul:not([class]) > li {
+  padding-bottom: 0.5em;
 }
 
 @media all and (min-width: 992px) {
