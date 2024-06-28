@@ -76,7 +76,6 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-
         acf_register_block_type(array(
             'name'				=> 'lc_faqs',
             'title'				=> __('LC FAQs'),
@@ -86,6 +85,7 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
+        
         acf_register_block_type(array(
             'name'				=> 'lc_contact_page',
             'title'				=> __('LC Contact Form'),
