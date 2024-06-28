@@ -21874,18 +21874,19 @@ footer .colophon a:hover {
 }
 footer .footer__grid {
   display: grid;
+  gap: 0.5rem;
   grid-template-areas: "logo" "services" "locations" "links" "call";
 }
 @media (min-width: 576px) {
   footer .footer__grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "logo logo" "services locations" "links call";
+    grid-template-areas: "logo logo" "services links" "locations locations" "call call";
   }
 }
 @media (min-width: 992px) {
   footer .footer__grid {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "logo services locations links call";
+    grid-template-areas: "logo services locations locations links call";
   }
 }
 footer .footer__title {
@@ -21915,6 +21916,12 @@ footer #footer_services {
 }
 footer #footer_locations {
   grid-area: locations;
+}
+@media (min-width: 576px) {
+  footer #footer_locations ul {
+    -moz-columns: 2;
+    columns: 2;
+  }
 }
 footer #footer_links {
   grid-area: links;

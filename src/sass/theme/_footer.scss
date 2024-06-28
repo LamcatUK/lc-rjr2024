@@ -53,18 +53,20 @@ footer {
     .footer {
         &__grid {
             display: grid;
+            gap: 0.5rem;
             grid-template-areas: "logo" "services" "locations" "links" "call";
             @media (min-width:576px) {
                 grid-template-columns: repeat(2,1fr);
                 grid-template-areas:
                     "logo logo"
-                    "services locations"
-                    "links call"
+                    "services links"
+                    "locations locations"
+                    "call call"
                 ;
             }
             @media (min-width:992px) {
                 grid-template-columns: repeat(5,1fr);
-                grid-template-areas: "logo services locations links call";
+                grid-template-areas: "logo services locations locations links call";
             }
         }
         &__title {
@@ -97,6 +99,11 @@ footer {
     }
     #footer_locations {
         grid-area: locations;
+        @media (min-width:576px) {
+            ul {
+                columns: 2;
+            }
+        }
     }
     #footer_links {
         grid-area: links;
