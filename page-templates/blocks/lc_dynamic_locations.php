@@ -1,14 +1,9 @@
 <section class="dynamic_locations py-5">
     <div class="container-xl">
-        <div class="text-center mb-5">
-            <h2><?=get_field('title')?></h2>
-            <div><?=get_field('content')?></div>
-        </div>
         <div class="row g-4">
-            <div class="col-md-6 text-center">
-                <?=wp_get_attachment_image( get_field('map'), 'large', false, null)?>
-            </div>
             <div class="col-md-6">
+                <h2><?=get_field('title')?></h2>
+                <div class="mb-4"><?=get_field('content')?></div>
                 <ul class="fa-ul cols-lg-2">
                 <?php
                 $locations = get_page_by_path('locations');
@@ -33,6 +28,9 @@
                 }
                 ?>
                 </ul>
+            </div>
+            <div class="col-md-6 text-center">
+                <?=wp_get_attachment_image( get_field('map'), 'large', false, null)?>
             </div>
         </div>
     </div>

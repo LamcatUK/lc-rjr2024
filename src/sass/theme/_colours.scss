@@ -1,4 +1,5 @@
-.text-green-400 {
+.text-green-400,
+.has-green-400-color {
     color: var(--col-green-400);
 }
 
@@ -21,3 +22,10 @@
 .has-grey-600-color {
     color: var(--col-grey-600);
 }
+
+// .text-white,
+// .has-white-color {
+//     a:hover {
+//         color: var(--col-green-400);
+//     }
+// }

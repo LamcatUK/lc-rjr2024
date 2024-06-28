@@ -47,7 +47,7 @@ main {
         font-weight: var(--fw-600);
         color: inherit;
         &:hover {
-            color: var(--col-taupe-400)
+            color: var(--col-green-400)
         }
     }
 }
@@ -71,7 +71,6 @@ input[type=submit].wpcf7-submit {
             background-color: var(--col-grey-500);
         }
     }
-    // background-color: var(--col-taupe-600);
     width: auto;
     background-color: #39464e;
     color: var(--col-white);
@@ -83,7 +82,6 @@ input[type=submit].wpcf7-submit {
     font-weight: var(--fw-600);
     transition: background-color var(--transition);
     &:hover {
-        // background-color: var(--col-taupe-400);
         background-color: #889095;
     }
 }

@@ -22,6 +22,7 @@
     <a class="service_nav__card" href="<?=get_the_permalink(get_the_ID())?>">
         <img src="<?=get_field('service_icon',get_the_ID())?>" alt="<?=get_the_title()?>" class="service_nav__icon">
         <h3 class="service_nav__title"><?=get_the_title()?></h3>
+        <div class="service_nav__desc"><?=get_field('description',get_the_ID())?></div>
     </a>
                     <?php
                 }

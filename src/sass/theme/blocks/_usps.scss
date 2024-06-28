@@ -1,0 +1,29 @@
+.usps {
+    &__grid {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    &__card {
+        width: calc(20% - 1rem);
+        min-width: 240px;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 78px 3rem auto;
+        gap: 0.5rem;
+    }
+    &__icon {
+        width: 96px;
+        height: 78px;
+        margin-inline: auto;
+        margin-bottom: 1rem;
+    }
+    &__title {
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+    &__desc {
+        text-wrap: balance;
+    }
+}
