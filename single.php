@@ -3,50 +3,6 @@
 defined('ABSPATH') || exit;
 $img = get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'single-blog__image'));
 
-
-$logo = get_stylesheet_directory_uri() . '/img/belmont-logo-full.png';
-$post_title = get_the_title();
-$post_thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'full' );
-$publication_date = get_the_date('c');
-$modification_date = get_the_modified_date('c');
-$permalink = get_permalink();
-
-$yoast_meta_description = get_post_meta( get_the_ID(), '_yoast_wpseo_metadesc', true );
-if (empty($yoast_meta_description)) {
-    $yoast_meta_description = wp_trim_words(get_the_excerpt(), 30, '...');
-}
-
-$schema = <<<EOT
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "$post_title",
-  "image": "$post_thumbnail",
-  "author": {
-    "@type": "Person",
-    "name": "Alease Parlanti",
-    "url": "https://belmontskinandlaserclinic.co.uk/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Belmont Skin and Laser Clinic",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "$logo"
-    }
-  },
-  "datePublished": "$publication_date",
-  "dateModified": "$modification_date",
-  "description": "$yoast_meta_description",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "$permalink"
-  }
-}
-</script>
-EOT;
-
 add_action('wp_head',function() {
     global $schema;
     echo $schema;
@@ -123,8 +79,7 @@ foreach ($blocks as $block) {
                     <?php
     }
 ?>
-                    <a href="/contact/" class="button button-primary text-center d-none d-lg-block">Contact Us
-                        Today!</a>
+                    <a href="/get-quote/" class="button button-green text-center d-none d-lg-block">Get a Quote Today!</a>
                 </div>
             </div>
         </div>

@@ -21559,6 +21559,7 @@ readers do not read off random characters that represent icons */
   --col-white: #FFFFFF;
   --col-grey-100: #e1efef;
   --col-grey-200: #d3dddd;
+  --col-grey-300: hsl(180, 13%, 45%);
   --col-grey-400: #00464a;
   --col-grey-600: #003538;
   --col-green-400: #1fc91f;
@@ -22013,10 +22014,10 @@ footer #footer_call {
   padding-bottom: 5rem;
 }
 .single-blog h2, .single-blog .h2 {
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
 }
 .single-blog h3, .single-blog .h3 {
-  font-size: var(--fs-500);
+  font-size: var(--fs-600);
 }
 .single-blog__image {
   margin-bottom: 1rem;
@@ -22024,13 +22025,15 @@ footer #footer_call {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 .single-blog__title {
   margin-bottom: 1rem;
   font-size: var(--fs-800);
 }
 .single-blog__read {
-  color: var(--col-grey-500);
+  color: var(--col-grey-300);
   font-size: var(--fs-300);
   margin-bottom: 1rem;
 }
@@ -22039,13 +22042,13 @@ footer #footer_call {
 }
 .single-blog .accordion-button {
   --bs-accordion-inner-border-radius: 0;
-  --bs-accordion-active-color: var(--col-cream-400);
+  --bs-accordion-active-color: var(--col-green-400);
   --bs-accordion-active-bg: transparent;
   --bs-accordion-btn-padding-x: 0;
   --bs-accordion-btn-padding-y: 0;
   --bs-accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
-  --bs-accordion-btn-color: var(--col-cream-400);
+  --bs-accordion-btn-color: var(--col-green-400);
   --bs-accordion-btn-bg: transparent;
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
@@ -22061,13 +22064,15 @@ footer #footer_call {
   margin-bottom: 1rem;
 }
 .single-blog .sidebar .quicklinks {
-  background-color: var(--col-taupe-400);
+  background-color: var(--col-grey-400);
   padding: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 .single-blog .sidebar .quicklinks .h5 {
-  color: var(--col-cream-400);
-  --_underline-colour: var(--col-cream-400);
+  color: var(--col-green-400);
+  font-weight: var(--fw-600);
 }
 .single-blog .sidebar .quicklinks li {
   list-style: none;
@@ -22082,7 +22087,7 @@ footer #footer_call {
   transition: all 0.2s ease-out;
 }
 .single-blog .sidebar .quicklinks li a:hover {
-  color: var(--col-cream-400);
+  color: var(--col-green-400);
 }
 
 .hero {

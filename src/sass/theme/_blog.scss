@@ -87,10 +87,10 @@
     padding-bottom: 5rem;
 
     h2, .h2 {
-        font-size: var(--fs-600);
+        font-size: var(--fs-700);
     }
     h3, .h3 {
-        font-size: var(--fs-500);
+        font-size: var(--fs-600);
     }
 
 
@@ -99,6 +99,8 @@
         aspect-ratio: 16 / 9;
         width: 100%;
         object-fit: cover;
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-sm);
     }
     &__title {
         margin-bottom: 1rem;
@@ -106,7 +108,7 @@
     }
 
     &__read {
-        color: var(--col-grey-500);
+        color: var(--col-grey-300);
         font-size: var(--fs-300);
         .reading {
             display: inline;
@@ -116,7 +118,7 @@
 
     .accordion-button {
         --bs-accordion-inner-border-radius: 0;
-        --bs-accordion-active-color: var(--col-cream-400);
+        --bs-accordion-active-color: var(--col-green-400);
         --bs-accordion-active-bg: transparent;
 
         --bs-accordion-btn-padding-x: 0;
@@ -124,7 +126,7 @@
 
         --bs-accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
         --bs-accordion-border-color: var(--bs-border-color);
-        --bs-accordion-btn-color: var(--col-cream-400);
+        --bs-accordion-btn-color: var(--col-green-400);
         --bs-accordion-btn-bg: transparent;
         --bs-accordion-btn-icon-width: 1.25rem;
         --bs-accordion-btn-icon-transform: rotate(-180deg);
@@ -144,13 +146,14 @@
         margin-bottom: 1rem;
 
         .quicklinks {
-            background-color: var(--col-taupe-400);
+            background-color: var(--col-grey-400);
             padding: 1rem;
-            margin-bottom: 0.5rem;
-
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-sm);
             .h5 {
-                color: var(--col-cream-400);
-                --_underline-colour: var(--col-cream-400);
+                color: var(--col-green-400);
+                font-weight: var(--fw-600);
             }
         
             li {
@@ -163,7 +166,7 @@
                     color: var(--col-white);
                     transition: all 0.2s ease-out;
                     &:hover {
-                        color: var(--col-cream-400);
+                        color: var(--col-green-400);
                     }
                 }
             }
