@@ -7,36 +7,17 @@ $pp = get_option('page_for_posts');
 
 ?>
 <main id="main" class="pb-5">
-    <section class=" hero">
-        <?=get_the_post_thumbnail($pp, 'full', array('class' => 'hero__bg'))?>
-        <div class="overlay"></div>
-        <div class="container-xl h-100 d-flex align-items-center">
-            <div class="hero__inner">
-                <h1 data-aos="fade-right">
-                    <?=get_the_title($pp)?>
-                </h1>
+    <section class="hero">
+        <div class="container-xl py-5 text-center">
+            <h1 class="text-green-400"><?=get_the_title($pp)?></h1>
+            <?php
+            if (get_the_content(null, false, $pp) ?? null) {
+                ?>
+            <div class="fs-700 text-white text-balance mb-4"><?=get_the_content(null, false, $pp)?></div>
                 <?php
-                $d = 0;
-if (get_the_content(null, false, $pp) ?? null) {
-    ?>
-                <div class="hero__content mb-4" data-aos="fade-right"
-                    data-aos-delay="<?=$d?>">
-                    <?=get_the_content(null, false, $pp)?>
-                </div>
-                <?php
-}
-                $d += 200;
-?>            <div class="button-group" data-aos="fade-right"
-data-aos-delay="<?=$d?>">
-                <div class="hero__button">
-                    <?=do_shortcode('[timely_button]')?>
-                </div>
-                <div class="hero__button" data-aos="fade-right"
-                    data-aos-delay="<?=$d?>">
-                    <a href="/contact/" class="button button-primary">Contact Us</a>
-                </div>
-              </div>
-            </div>
+            }
+            ?>
+            <a href="/get-quote/" class="button button-green">Get a Quote</a>
         </div>
     </section>
     <div class="container-xl py-5 mb-5">
