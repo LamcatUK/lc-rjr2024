@@ -4,7 +4,7 @@
         <?php
         if (get_field('content') ?? null) {
             ?>
-        <div class="fs-700 text-white mb-4"><?=get_field('content')?></div>
+        <div class="fs-700 text-white text-balance mb-4"><?=get_field('content')?></div>
             <?php
         }
         if (get_field('cta') ?? null) {
