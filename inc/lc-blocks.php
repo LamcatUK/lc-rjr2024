@@ -85,10 +85,10 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-        
+
         acf_register_block_type(array(
             'name'				=> 'lc_contact_page',
-            'title'				=> __('LC Contact Form'),
+            'title'				=> __('LC Contact Details and Form Block'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
             'render_template'	=> 'page-templates/blocks/lc_contact_page.php',
