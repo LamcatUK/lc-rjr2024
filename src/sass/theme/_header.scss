@@ -24,6 +24,7 @@ header {
         padding-right: 0 !important;
         position: relative;
         &:hover,
+        &:focus,
         &:focus-visible,
         &[aria-current="page"] {
             color: var(--col-green-400);

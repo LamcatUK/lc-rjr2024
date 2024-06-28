@@ -21781,7 +21781,7 @@ header .nav-link {
   padding-right: 0 !important;
   position: relative;
 }
-header .nav-link:hover, header .nav-link:focus-visible, header .nav-link[aria-current=page] {
+header .nav-link:hover, header .nav-link:focus, header .nav-link:focus-visible, header .nav-link[aria-current=page] {
   color: var(--col-green-400);
 }
 @media (min-width: 992px) {
