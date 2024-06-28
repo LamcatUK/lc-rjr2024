@@ -25,20 +25,41 @@ function contact_address()
 }
 
 add_shortcode('contact_phone', 'contact_phone');
-function contact_phone()
+function contact_phone($atts)
 {
-    if (get_field('contact_phone', 'options')) {
-        return '<a href="tel:' . parse_phone(get_field('contact_phone', 'options')) . '">' . get_field('contact_phone', 'options') . '</a>';
+
+    $atts = shortcode_atts(
+        array(
+            'text' => '',
+        ), 
+        $atts
+    );
+
+    $phone_number = get_field('contact_phone', 'options');
+
+    if ($phone_number) {
+        $link_text = $atts['text'] ? $atts['text'] : $phone_number;
+        return '<a href="tel:' . parse_phone($phone_number) . '">' . esc_html($link_text) . '</a>';
     }
-    return;
+    return '';
 }
 
 add_shortcode('contact_email', 'contact_email');
-
-function contact_email()
+function contact_email($atts)
 {
-    if (get_field('contact_email', 'options')) {
-        return '<a href="mailto:' . get_field('contact_email', 'options') . '">' . get_field('contact_email', 'options') . '</a>';
+
+    $atts = shortcode_atts(
+        array(
+            'text' => '',
+        ), 
+        $atts
+    );
+
+    $email_address = get_field('contact_email', 'options');
+
+    if ($email_address) {
+        $link_text = $atts['text'] ? $atts['text'] : $email_address;
+        return '<a href="mailto:' . $email_address . '">' . esc_html($link_text) . '</a>';
     }
     return;
 }
