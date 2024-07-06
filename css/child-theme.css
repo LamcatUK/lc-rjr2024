@@ -22266,6 +22266,9 @@ footer .waste-carriers-info__grid {
   align-items: center;
   gap: 1rem;
 }
+.pushthrough__content {
+  align-content: center;
+}
 .pushthrough__image {
   max-height: 140px;
   width: auto;

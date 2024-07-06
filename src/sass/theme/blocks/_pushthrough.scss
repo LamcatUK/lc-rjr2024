@@ -12,6 +12,9 @@
         align-items: center;
         gap: 1rem;
     }
+    &__content {
+        align-content: center;
+    }
     &__image {
         max-height: 140px;
         width: auto;
