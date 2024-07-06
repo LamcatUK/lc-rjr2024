@@ -149,4 +149,64 @@ add_action('wp_enqueue_scripts', 'lc_theme_enqueue');
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
+
+function display_waste_carriers_info($registration_number) {
+    // Construct the URL with the provided registration number
+    $url = 'https://environment.data.gov.uk/public-register/waste-carriers-brokers/widget/' . urlencode($registration_number);
+
+    // Fetch the content from the URL
+    $response = wp_remote_get($url);
+
+    if (is_wp_error($response)) {
+        return 'Error fetching the data.';
+    }
+
+    $body = wp_remote_retrieve_body($response);
+    if (empty($body)) {
+        return 'No data found.';
+    }
+
+    // Parse the HTML
+    $dom = new DOMDocument();
+    @$dom->loadHTML($body);
+
+    // Use DOMXPath to find the specific elements
+    $xpath = new DOMXPath($dom);
+
+    // Extract the registration number link
+    $registration_link = '';
+    $registration_nodes = $xpath->query("//a[contains(@href, 'CBDU')]");
+    if ($registration_nodes->length > 0) {
+        $registration_link = $registration_nodes->item(0)->getAttribute('href');
+        $registration_link = preg_replace('/^http:/i', 'https:', $registration_link);
+    }
+
+    // Extract the expiry date
+    $expiry_date = '';
+    $expiry_nodes = $xpath->query("//tr[th[contains(text(), 'Expiry Date')]]/td");
+    if ($expiry_nodes->length > 0) {
+        $expiry_date = trim($expiry_nodes->item(0)->textContent);
+    }
+
+    // Format the output
+    if (!empty($registration_link) && !empty($expiry_date)) {
+        $output  = '<a href="' . esc_url($registration_link) . '" target="_blank" class="waste-carriers-info">';
+        $output .= '<img src="' . get_stylesheet_directory_uri() . '/img/ea-logo--wo.svg" width="100" height"28" class="mb-2">';
+        $output .= '<div class="fw-bold">Registered Waste Carrier Dealer</div>';
+        $output .= '<div class="waste-carriers-info__grid">';
+        $output .= '<div>Reg No:</div>';
+        $output .= esc_html($registration_number) . '<br>';
+        $output .= '<div>Expiry Date:</div>';
+        $output .= esc_html($expiry_date) . '<br>';
+        $output .= '</div>';
+        $output .= '</a>';
+
+        return $output;
+    } else {
+        return 'No valid data found.';
+    }
+}
+
+
+
 ?>

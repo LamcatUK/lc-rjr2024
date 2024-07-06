@@ -14,8 +14,9 @@ defined('ABSPATH') || exit;
 <footer>
     <div class="container-xl">
         <div class="footer__grid py-5">
-            <div id="footer_logo" class="text-center text-sm-start">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/rjr-logo--colour.svg" width=140 height=40 alt="RJR Waste Clearance" class="mb-4">
+            <div id="footer_logo" class="mx-auto ms-sm-0">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/rjr-logo--colour.svg" width=205 height=40 alt="RJR Waste Clearance" class="mb-5">
+                <?=display_waste_carriers_info(get_field('waste_licence_number','options'))?>
             </div>
             <div id="footer_services" class="text-center text-sm-start">
                 <div class="footer__title">Services</div>
@@ -49,7 +50,7 @@ defined('ABSPATH') || exit;
         <div class="container-xl">
             <div class="row g-2">
                 <div class="col-lg-8 text-center text-lg-start">
-                    &copy; <?=date('Y')?> RJR Waste Clearance Ltd. Registered in England, no 15793151. Registered Office: 48 Spring Plat, Crawley, West Sussex, RH10 7BG
+                    &copy; <?=date('Y')?> RJR Waste Clearance Ltd. Registered in England, no <a href="http://business.data.gov.uk/id/company/15793151" target="_blank">15793151</a>. Registered Office: 48 Spring Plat, Crawley, West Sussex, RH10 7BG
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookie-policy/">Cookie</a> Policies | Site by <a

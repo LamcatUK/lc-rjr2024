@@ -67,6 +67,11 @@ h3, .h3 {
 }
 
 .fs-300,
+.smallest {
+    font-size: var(--fs-200) !important;
+}
+
+.fs-300,
 .has-small-font-size,
 .small {
     font-size: var(--fs-300) !important;

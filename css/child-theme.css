@@ -21680,6 +21680,11 @@ h3, .h3 {
 }
 
 .fs-300,
+.smallest {
+  font-size: var(--fs-200) !important;
+}
+
+.fs-300,
 .has-small-font-size,
 .small {
   font-size: var(--fs-300) !important;
@@ -21827,7 +21832,7 @@ header .navbars {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top left;
-  width: 140px;
+  width: 205px;
   height: 40px;
   margin-right: 0;
 }
@@ -21915,6 +21920,9 @@ footer .footer__call div {
 footer #footer_logo {
   grid-area: logo;
 }
+footer #footer_logo img {
+  display: block;
+}
 footer #footer_services {
   grid-area: services;
 }
@@ -21932,6 +21940,15 @@ footer #footer_links {
 }
 footer #footer_call {
   grid-area: call;
+}
+footer .waste-carriers-info {
+  display: block;
+  font-size: var(--fs-200);
+  margin-bottom: 2rem;
+}
+footer .waste-carriers-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid {

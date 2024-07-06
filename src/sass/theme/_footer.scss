@@ -93,6 +93,9 @@ footer {
 
     #footer_logo {
         grid-area: logo;
+        img {
+            display: block;
+        }
     }
     #footer_services {
         grid-area: services;
@@ -110,6 +113,16 @@ footer {
     }
     #footer_call {
         grid-area: call;
+    }
+
+    .waste-carriers-info {
+        display: block;
+        font-size: var(--fs-200);
+        margin-bottom: 2rem;
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
     }
 
 }
