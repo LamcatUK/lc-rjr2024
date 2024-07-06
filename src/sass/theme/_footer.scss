@@ -53,7 +53,7 @@ footer {
     .footer {
         &__grid {
             display: grid;
-            gap: 0.5rem;
+            gap: 1rem;
             grid-template-areas: "logo" "services" "links" "locations" "call";
             @media (min-width:576px) {
                 grid-template-columns: repeat(2,1fr);

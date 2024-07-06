@@ -21611,6 +21611,11 @@ readers do not read off random characters that represent icons */
   color: var(--col-grey-600);
 }
 
+.text-black,
+.has-black-color {
+  color: var(--col-black);
+}
+
 /* open-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -21883,7 +21888,7 @@ footer .colophon a:hover {
 }
 footer .footer__grid {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
   grid-template-areas: "logo" "services" "links" "locations" "call";
 }
 @media (min-width: 576px) {
@@ -22244,6 +22249,26 @@ footer .waste-carriers-info__grid {
 }
 .usps__desc {
   text-wrap: balance;
+}
+
+.pushthrough__grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .pushthrough__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.pushthrough__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.pushthrough__image {
+  max-height: 140px;
+  width: auto;
 }
 
 html {

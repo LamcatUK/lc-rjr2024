@@ -1,0 +1,19 @@
+.pushthrough {
+    &__grid {
+        display: grid;
+        gap: 2rem;
+        @media (min-width:768px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    &__logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__image {
+        max-height: 140px;
+        width: auto;
+    }
+}
