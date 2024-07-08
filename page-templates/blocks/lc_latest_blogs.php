@@ -1,12 +1,15 @@
+<?php
+$q = new WP_Query(array(
+    'post_type' => 'post',
+    'posts_per_page' => 3
+));
+if ($q->have_posts()) {
+    ?>
 <section class="latest_blogs py-5">
     <div class="container-xl">
         <h2 class="text-center mb-4">Latest News, Blogs &amp; Guides</h2>
         <div class="grid mb-4">
-        <?php
-        $q = new WP_Query(array(
-            'post_type' => 'post',
-            'posts_per_page' => 3
-        ));
+            <?php
 while ($q->have_posts()) {
         $q->the_post();
         $img = get_the_post_thumbnail_url(get_the_ID(), 'large');
@@ -53,3 +56,5 @@ wp_reset_postdata();
         <div class="text-center"><a href="/blog/" class="button button-outline">View all</a></div>
     </div>
 </section>
+    <?php
+}
