@@ -23,9 +23,8 @@ function widgets_init()
   
     register_nav_menus(array(
         'primary_nav' => 'Primary Nav',
-        'footer_menu_1' => 'Footer 1',
-        'footer_menu_2' => 'Footer 2',
-        'footer_menu_3' => 'Footer 3',
+        'footer_menu_1' => 'Footer Services',
+        'footer_menu_3' => 'Footer Quick Links',
     ));
  
     unregister_sidebar('hero');

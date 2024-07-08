@@ -12,7 +12,8 @@
                     'post_parent' => $locations->ID,
                     'orderby' => 'title',
                     'order' => 'ASC',
-                    'posts_per_page' => -1
+                    'posts_per_page' => -1,
+                    'post_status' => 'any'
                 );
                 
                 $query = new WP_Query($args);
@@ -20,11 +21,17 @@
                 if ($query->have_posts()) {
                     while ($query->have_posts()) {
                         $query->the_post();
-                        ?>
+                        if (get_post_status() == 'publish') {
+                            ?>
                     <li class="mb-2"><span class="fa-li"><i class="fa-solid fa-map-marker-alt text-green-400"></i></span> <a href="<?=get_the_permalink(get_the_ID())?>"><?=get_the_title()?></a></li>
-                        <?php
+                            <?php
+                        }
+                        else {
+                            ?>
+                    <li class="mb-2"><span class="fa-li"><i class="fa-solid fa-map-marker-alt text-green-400"></i></span> <?=get_the_title()?></li>
+                            <?php
+                        }
                     }
-                    wp_reset_postdata();
                 }
                 ?>
                 </ul>

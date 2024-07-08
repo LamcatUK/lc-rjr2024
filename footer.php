@@ -26,7 +26,40 @@ defined('ABSPATH') || exit;
             </div>
             <div id="footer_locations" class="text-center text-sm-start">
                 <div class="footer__title">Locations</div>
-                <?php wp_nav_menu(array('theme_location' => 'footer_menu_2')); ?>
+                <div class="menu-footer-locations-container">
+                    <ul id="menu-footer-locations" class="menu">
+                <?php
+                $live = get_field('locations_are_live','options') ?? null;
+                $locations = get_page_by_path('locations');
+                $args = array(
+                    'post_type' => 'page',
+                    'post_parent' => $locations->ID,
+                    'orderby' => 'title',
+                    'order' => 'ASC',
+                    'posts_per_page' => -1,
+                    'post_status' => 'any'
+                );
+                
+                $query = new WP_Query($args);
+                
+                if ($query->have_posts()) {
+                    while ($query->have_posts()) {
+                        $query->the_post();
+                        if (get_post_status() == 'publish') {
+                            ?>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?=get_the_permalink()?>"><?=get_the_title()?></a></li>
+                            <?php
+                        }
+                        else {
+                            ?>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><?=get_the_title()?></li>
+                            <?php
+                        }
+                    }
+                }
+                ?>  
+                    </ul>
+                </div>
             </div>
             <div id="footer_links" class="text-center text-sm-start">
                 <div class="footer__title">Quick Links</div>
