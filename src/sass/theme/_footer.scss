@@ -33,7 +33,8 @@ footer {
     .social_icons {
         display: flex;
         gap: 1rem;
-        font-size: var(--fs-600);
+        font-size: var(--fs-700);
+        justify-content: center;
     }
 
     .colophon {

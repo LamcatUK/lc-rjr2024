@@ -73,8 +73,11 @@ defined('ABSPATH') || exit;
                         <div class="text-white"><?=get_field('contact_phone','options')?></div>
                     </div>
                 </a>
-                <div>
+                <div class="mb-4">
                     <a href="/get-quote/" class="button button-green">Get a Quote</a>
+                </div>
+                <div class="socials">
+                    <?=do_shortcode('[social_icons]')?>
                 </div>
             </div>
         </div>

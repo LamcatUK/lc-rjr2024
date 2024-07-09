@@ -21871,7 +21871,8 @@ footer .fa-ul li {
 footer .social_icons {
   display: flex;
   gap: 1rem;
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
+  justify-content: center;
 }
 footer .colophon {
   background-color: var(--col-grey-600);
