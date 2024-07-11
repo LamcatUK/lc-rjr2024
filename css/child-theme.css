@@ -22155,12 +22155,7 @@ footer .waste-carriers-info__grid {
 }
 @media (min-width: 768px) {
   .service_nav__card {
-    max-width: 300px;
-  }
-}
-@media (min-width: 992px) {
-  .service_nav__card {
-    max-width: 300px;
+    max-width: 410px;
   }
 }
 .service_nav__card:hover {
