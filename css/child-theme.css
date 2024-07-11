@@ -22153,7 +22153,7 @@ footer .waste-carriers-info__grid {
   transition: box-shadow var(--transition), transform var(--transition);
   width: 100%;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .service_nav__card {
     max-width: 300px;
   }

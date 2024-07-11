@@ -52,7 +52,7 @@
         transition: box-shadow var(--transition), transform var(--transition);
         width: 100%;
 
-        @media (min-width:576px) {
+        @media (min-width:768px) {
             max-width: 300px; // Adjust as needed to ensure a consistent width
         }
         @media (min-width:992px) {
