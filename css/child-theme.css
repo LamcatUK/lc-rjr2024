@@ -22142,16 +22142,6 @@ footer .waste-carriers-info__grid {
   gap: 2rem;
   justify-content: center;
 }
-@media (min-width: 576px) {
-  .service_nav__grid {
-    justify-content: center;
-  }
-}
-@media (min-width: 992px) {
-  .service_nav__grid {
-    justify-content: center;
-  }
-}
 .service_nav__card {
   background-color: var(--col-grey-400);
   color: var(--col-white);
@@ -22162,7 +22152,6 @@ footer .waste-carriers-info__grid {
   text-decoration: none;
   transition: box-shadow var(--transition), transform var(--transition);
   width: 100%;
-  max-width: 300px;
 }
 @media (min-width: 576px) {
   .service_nav__card {

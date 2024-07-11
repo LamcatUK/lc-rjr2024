@@ -40,13 +40,6 @@
         flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
-
-        @media (min-width:576px) {
-            justify-content: center; // Ensuring centering on larger screens
-        }
-        @media (min-width:992px) {
-            justify-content: center; // Ensuring centering on larger screens
-        }
     }
     &__card {
         background-color: var(--col-grey-400);
@@ -58,7 +51,6 @@
         text-decoration: none;
         transition: box-shadow var(--transition), transform var(--transition);
         width: 100%;
-        max-width: 300px; // Adjust as needed to ensure a consistent width
 
         @media (min-width:576px) {
             max-width: 300px; // Adjust as needed to ensure a consistent width
