@@ -22144,12 +22144,12 @@ footer .waste-carriers-info__grid {
 }
 @media (min-width: 576px) {
   .service_nav__grid {
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 @media (min-width: 992px) {
   .service_nav__grid {
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 .service_nav__card {
@@ -22161,16 +22161,17 @@ footer .waste-carriers-info__grid {
   text-align: center;
   text-decoration: none;
   transition: box-shadow var(--transition), transform var(--transition);
-  flex: 1 1 calc(50% - 2rem);
+  width: 100%;
+  max-width: 300px;
 }
 @media (min-width: 576px) {
   .service_nav__card {
-    flex: 1 1 calc(45% - 2rem);
+    max-width: 300px;
   }
 }
 @media (min-width: 992px) {
   .service_nav__card {
-    flex: 1 1 calc(22.5% - 2rem);
+    max-width: 300px;
   }
 }
 .service_nav__card:hover {

@@ -42,10 +42,10 @@
         justify-content: center;
 
         @media (min-width:576px) {
-            justify-content: space-between;
+            justify-content: center; // Ensuring centering on larger screens
         }
         @media (min-width:992px) {
-            justify-content: space-around;
+            justify-content: center; // Ensuring centering on larger screens
         }
     }
     &__card {
@@ -57,13 +57,14 @@
         text-align: center;
         text-decoration: none;
         transition: box-shadow var(--transition), transform var(--transition);
-        flex: 1 1 calc(50% - 2rem);
+        width: 100%;
+        max-width: 300px; // Adjust as needed to ensure a consistent width
 
         @media (min-width:576px) {
-            flex: 1 1 calc(45% - 2rem);
+            max-width: 300px; // Adjust as needed to ensure a consistent width
         }
         @media (min-width:992px) {
-            flex: 1 1 calc(22.5% - 2rem);
+            max-width: 300px; // Adjust as needed to ensure a consistent width
         }
 
         &:hover {
