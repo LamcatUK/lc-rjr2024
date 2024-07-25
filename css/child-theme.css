@@ -21684,6 +21684,10 @@ h3, .h3 {
   justify-content: center; /* Center the flex items horizontally */
 }
 
+.has-text-align-center {
+  text-align: center;
+}
+
 .fs-300,
 .smallest {
   font-size: var(--fs-200) !important;
