@@ -95,7 +95,7 @@ input[type=submit].wpcf7-submit {
 }
 
 .breadcrumbs {
-    color: var(--col-grey-500);
+    color: var(--col-grey-600);
     font-size: var(--fs-300);
     a {
         text-decoration: none;
@@ -136,4 +136,27 @@ input[type=submit].wpcf7-submit {
 
     font-size: var(--fs-600);
     font-weight: var(--fw-600);
+}
+
+
+.qr {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    padding-block: 1rem 3rem;
+    &__button {
+        width: min(300px,80vw);
+        margin-inline: auto;
+        border-radius: 1rem;
+        background-color: var(--col-grey-600);
+        color: var(--col-green-400);
+        text-align: center;
+        text-decoration: none;
+        padding: 1.5rem 1rem;
+        font-size: var(--fs-700);
+        font-weight: var(--fw-600);
+        &:hover {
+            color: var(--col-white);
+        }
+    }
 }

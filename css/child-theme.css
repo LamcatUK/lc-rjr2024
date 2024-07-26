@@ -22367,7 +22367,7 @@ input[type=submit].wpcf7-submit:hover {
 }
 
 .breadcrumbs {
-  color: var(--col-grey-500);
+  color: var(--col-grey-600);
   font-size: var(--fs-300);
 }
 .breadcrumbs a {
@@ -22406,6 +22406,28 @@ input[type=submit].wpcf7-submit:hover {
 .accordion-button:focus {
   --bs-accordion-btn-focus-border-color: var(--col-green-400);
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem hsl(var(--hsl-green-400) / 0.25);
+}
+
+.qr {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+  padding-block: 1rem 3rem;
+}
+.qr__button {
+  width: min(300px, 80vw);
+  margin-inline: auto;
+  border-radius: 1rem;
+  background-color: var(--col-grey-600);
+  color: var(--col-green-400);
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem 1rem;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-600);
+}
+.qr__button:hover {
+  color: var(--col-white);
 }
 
 .has-blue-color,
