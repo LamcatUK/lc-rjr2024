@@ -22412,7 +22412,7 @@ input[type=submit].wpcf7-submit:hover {
   display: grid;
   gap: 1rem;
   text-align: center;
-  padding-block: 1rem 3rem;
+  padding-bottom: 3rem;
 }
 .qr__button {
   width: min(300px, 80vw);
