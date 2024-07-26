@@ -14,6 +14,9 @@ get_header();
         <a class="qr__button" href="tel:<?=parse_phone(get_field('contact_phone','options'))?>">
             <i class="fa-solid fa-phone"></i> Call <?=get_field('contact_phone','options')?>
         </a>
+        <a class="qr__button" href="/get-quote/">
+            <i class="fa-solid fa-coins"></i> Get Quote
+        </a>
         <a class="qr__button" href="https://api.whatsapp.com/send?phone=<?=parse_phone(get_field('contact_phone','options'))?>&text=Hi,%20I%27m%20contacting%20you%20from%20the%20RJR%20Waste%20Clearance%20website." target="_blank">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
