@@ -56,12 +56,21 @@
             max-width: 410px; // Adjust as needed to ensure a consistent width
         }
 
-        &:hover {
-            color: var(--col-white);
-            transform: translateY(2px);
-            box-shadow: var(--shadow-sm);
-        }
     }
+    a.service_nav__card:hover {
+        color: var(--col-white);
+        transform: translateY(2px);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .service_nav__grid.two_col {
+        @media (min-width:768px) {
+            .service_nav__card {
+                max-width: 300px; // Adjust as needed to ensure a consistent width
+            }
+        }   
+    }
+
     &__icon {
         width: 96px;
         height: 78px;

@@ -32,6 +32,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
+            'name'				=> 'lc_area_services',
+            'title'				=> __('LC Area Service Cards'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_area_services.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
             'name'				=> 'lc_quote_banner',
             'title'				=> __('LC Quote CTA Banner'),
             'category'			=> 'layout',
