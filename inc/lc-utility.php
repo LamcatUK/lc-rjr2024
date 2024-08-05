@@ -16,6 +16,22 @@ function split_lines($content)
     return $content;
 }
 
+function textarea_array($content) {
+    // Replace <br> tags with newline characters
+    $string_with_newlines = str_replace('<br />', "\n", $content);
+    
+    // Split the string by newline characters into an array
+    $array_of_values = explode("\n", $string_with_newlines);
+    
+    // Trim whitespace from each value and remove empty values
+    $array_of_values = array_map('trim', $array_of_values);
+    $array_of_values = array_filter($array_of_values, function($value) {
+        return !empty($value);
+    });
+    
+    return $array_of_values;
+}
+
 add_shortcode('contact_address', 'contact_address');
 
 function contact_address()

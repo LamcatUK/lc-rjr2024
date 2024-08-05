@@ -1,10 +1,8 @@
 <?php
-$l = get_field('linked') == 'Yes' ?? null;
-
 $cards = get_field('services');
 $cols = (count($cards) % 2 == 0) ? 'two_col' : '';
 ?>
-<section class="service_nav">
+<section class="service_nav py-5 bg-grey-100">
     <div class="container-xl">
         <h2 class="text-center"><?=get_field('title')?></h2>
         <div class="text-center w-constrain mb-4"><?=get_field('content')?></div>

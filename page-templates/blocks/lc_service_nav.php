@@ -1,20 +1,24 @@
+<?php
+$services = get_page_by_path('services');
+$args = array(
+    'post_type' => 'page',
+    'post_parent' => $services->ID,
+    'orderby' => 'title',
+    'order' => 'ASC',
+    'posts_per_page' => -1
+);
+
+$query = new WP_Query($args);
+
+$cards = $query->found_posts;
+$cols = ($cards % 2 == 0) ? 'two_col' : '';
+?>
 <section class="service_nav py-5 bg-grey-100">
     <div class="container-xl">
         <h2 class="text-center"><?=get_field('title')?></h2>
         <div class="text-center w-constrain mb-4"><?=get_field('content')?></div>
-        <div class="service_nav__grid">
+        <div class="service_nav__grid <?=$cols?>">
             <?php
-            $services = get_page_by_path('services');
-            $args = array(
-                'post_type' => 'page',
-                'post_parent' => $services->ID,
-                'orderby' => 'title',
-                'order' => 'ASC',
-                'posts_per_page' => -1
-            );
-            
-            $query = new WP_Query($args);
-
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
                     $query->the_post();
